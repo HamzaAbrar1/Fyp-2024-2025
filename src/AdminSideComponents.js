@@ -1,8 +1,10 @@
+import { useState } from "react";
 import AdminFirstComponent from "./AdminSideComponents/AdminFirstBox.js";
 import LineBox from "./AdminSideComponents/LineBox.js";
 import LineBoxInventory from "./AdminSideComponents/LineBoxInventory.js";
 import Hoodie from "./hoodie.jpeg";
 function AdminSideComponents() {
+  const [state, setState] = useState(false);
   return (
     <div className="w-[76vw] border-2 border-red-600 ml-[12vw]">
       <div className="rightbox w-[30%] ">
@@ -76,19 +78,19 @@ function AdminSideComponents() {
         </div>
       </div>
 
-      <div className="central box w-full">
+      <div className="central box w-full flex gap-2">
         {/* Inventory code */}
         <div className="left side w-[70%] border-2 rounded-md mt-2 border-[#E1E2E6] text-[#E1E2E6] text-[9px] p-1 pt-2">
           <div className="text-12px">Invetory</div>
           <div className="w-full text-[#727588] border-b-2 border-[#727588] pb-1 flex mt-5">
             <div className="ml-[2%] w-[21%]">Products</div>
             <div className="w-[75%] mr-[2%] flex justify-between">
-              <span className="w-[14%] flex justify-start" >Qty</span>
+              <span className="w-[14%] flex justify-start">Qty</span>
               <span className="w-[14%] flex justify-start">Last Restocked</span>
               <span className="w-[14%] flex justify-start">Unit Price</span>
               <span className="w-[14%] flex justify-start">Net Profit</span>
-              <span className="w-[14%] flex justify-start" >Status</span>
-              <span className="w-[14%] flex justify-start" >Actions</span>
+              <span className="w-[14%] flex justify-start">Status</span>
+              <span className="w-[14%] flex justify-start">Actions</span>
               <span className="w-[14%] flex justify-start">Restock</span>
             </div>
           </div>
@@ -203,6 +205,26 @@ function AdminSideComponents() {
             Restock={"Request"}
           />
         </div>
+
+        <div className="w-[25%] h-[20vh] mt-4 border border-[#E1E2E6] rounded-md flex justify-center items-center transition">
+  <div
+    className={`relative w-2/4 rounded-2xl h-8 flex items-center duration-1000 ${
+      state ? "bg-orange-600" : "bg-white"
+    }`}
+  >
+    <div
+      className={`absolute h-8 w-8 rounded-full duration-1000 ${
+        state ? "bg-white left-0" : "bg-black right-0"
+      } cursor-pointer`}
+      onClick={(e) => {
+        e.preventDefault();
+        setState(!state);
+      }}
+    ></div>
+  </div>
+</div>
+
+
       </div>
     </div>
   );
