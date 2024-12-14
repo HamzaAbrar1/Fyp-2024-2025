@@ -21,6 +21,7 @@ import Cart from "./Cart.js";
 import AdminSideBar from "./Components/AdminSideBar.js";
 import EcommerceDashboard from "./Components/EcommerceDashboard.js";
 import SaleAnalytics from "./Components/SaleAnalytics.js";
+import AdminSideComponents from "./AdminSideComponents.js";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -35,6 +36,9 @@ const router = createBrowserRouter(
       <Route path="/Cart" element={<Cart />} />
       <Route path="/Ecomm" element={<EcommerceDashboard />} />
       <Route path="/Sales" element={<SaleAnalytics />} />
+      <Route path="/Admin" element={<AdminSideComponents/>}/>
+
+    
     </>
   )
 );
