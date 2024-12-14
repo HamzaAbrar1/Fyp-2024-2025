@@ -1,6 +1,7 @@
 import AdminFirstComponent from "./AdminSideComponents/AdminFirstBox.js";
 import LineBox from "./AdminSideComponents/LineBox.js";
-import Hoodie from "./hoodie.jpeg"
+import LineBoxInventory from "./AdminSideComponents/LineBoxInventory.js";
+import Hoodie from "./hoodie.jpeg";
 function AdminSideComponents() {
   return (
     <div className="w-[76vw] border-2 border-red-600 ml-[12vw]">
@@ -22,7 +23,7 @@ function AdminSideComponents() {
         />
       </div>
 
-      <div className="leftbox mt-2">
+      <div className="leftbox mt-2 w-full">
         <div className="w-[30%] border-2 rounded-md text-[#E1E2E6] p-2 text-[9px]">
           <div className="text-[12px] text-[#E1E2E6]">
             Quantity Restock-Recommendations
@@ -35,13 +36,172 @@ function AdminSideComponents() {
               <span>Restock</span>
             </div>
           </div>
-        
-            <LineBox name={"Deco accessory"} Quantity={"x15"} Increase={"+40%"} image={Hoodie}/>
-            <LineBox name={"Deco accessory"} Quantity={"x15"} Increase={"+40%"} image={Hoodie}/>
-            <LineBox name={"Deco accessory"} Quantity={"x15"} Increase={"+40%"} image={Hoodie}/>
-            <LineBox name={"Deco accessory"} Quantity={"x15"} Increase={"+40%"} image={Hoodie}/>
-            <LineBox name={"Deco accessory"} Quantity={"x15"} Increase={"+40%"} image={Hoodie}/>
-            <LineBox name={"Deco accessory"} Quantity={"x15"} Increase={"+40%"} image={Hoodie}/>
+
+          <LineBox
+            name={"Deco accessory"}
+            Quantity={"x15"}
+            Increase={"+40%"}
+            image={Hoodie}
+          />
+          <LineBox
+            name={"Deco accessory"}
+            Quantity={"x15"}
+            Increase={"+40%"}
+            image={Hoodie}
+          />
+          <LineBox
+            name={"Deco accessory"}
+            Quantity={"x15"}
+            Increase={"+40%"}
+            image={Hoodie}
+          />
+          <LineBox
+            name={"Deco accessory"}
+            Quantity={"x15"}
+            Increase={"+40%"}
+            image={Hoodie}
+          />
+          <LineBox
+            name={"Deco accessory"}
+            Quantity={"x15"}
+            Increase={"+40%"}
+            image={Hoodie}
+          />
+          <LineBox
+            name={"Deco accessory"}
+            Quantity={"x15"}
+            Increase={"+40%"}
+            image={Hoodie}
+          />
+        </div>
+      </div>
+
+      <div className="central box w-full">
+        {/* Inventory code */}
+        <div className="left side w-[70%] border-2 rounded-md mt-2 border-[#E1E2E6] text-[#E1E2E6] text-[9px] p-1 pt-2">
+          <div className="text-12px">Invetory</div>
+          <div className="w-full text-[#727588] border-b-2 border-[#727588] pb-1 flex mt-5">
+            <div className="ml-[2%] w-[21%]">Products</div>
+            <div className="w-[75%] mr-[2%] flex justify-between">
+              <span className="w-[14%] flex justify-start" >Qty</span>
+              <span className="w-[14%] flex justify-start">Last Restocked</span>
+              <span className="w-[14%] flex justify-start">Unit Price</span>
+              <span className="w-[14%] flex justify-start">Net Profit</span>
+              <span className="w-[14%] flex justify-start" >Status</span>
+              <span className="w-[14%] flex justify-start" >Actions</span>
+              <span className="w-[14%] flex justify-start">Restock</span>
+            </div>
+          </div>
+          <LineBoxInventory
+            name={"Analog table clock"}
+            image={Hoodie}
+            Qty={"x2"}
+            LastRestocked={"Feb 5,2024"}
+            UnitPrice={"$600"}
+            NetProfit={"$60.75"}
+            Status={"Under-Stock"}
+            Actions={"rice"}
+            Restock={"Request"}
+          />
+          <LineBoxInventory
+            name={"Analog table clock"}
+            image={Hoodie}
+            Qty={"x2"}
+            LastRestocked={"Feb 5,2024"}
+            UnitPrice={"$600"}
+            NetProfit={"$60.75"}
+            Status={"Over-Stock"}
+            Actions={"rice"}
+            Restock={"Request"}
+          />
+          <LineBoxInventory
+            name={"Analog table clock"}
+            image={Hoodie}
+            Qty={"x2"}
+            LastRestocked={"Feb 5,2024"}
+            UnitPrice={"$600"}
+            NetProfit={"$60.75"}
+            Status={"Balanced"}
+            Actions={"rice"}
+            Restock={"Request"}
+          />
+          <LineBoxInventory
+            name={"Analog table clock"}
+            image={Hoodie}
+            Qty={"x2"}
+            LastRestocked={"Feb 5,2024"}
+            UnitPrice={"$600"}
+            NetProfit={"$60.75"}
+            Status={"Normal"}
+            Actions={"rice"}
+            Restock={"Request"}
+          />
+          <LineBoxInventory
+            name={"Analog table clock"}
+            image={Hoodie}
+            Qty={"x2"}
+            LastRestocked={"Feb 5,2024"}
+            UnitPrice={"$600"}
+            NetProfit={"$60.75"}
+            Status={"Under-Stock"}
+            Actions={"rice"}
+            Restock={"Request"}
+          />
+          <LineBoxInventory
+            name={"Analog table clock"}
+            image={Hoodie}
+            Qty={"x2"}
+            LastRestocked={"Feb 5,2024"}
+            UnitPrice={"$600"}
+            NetProfit={"$60.75"}
+            Status={"Over-Stock"}
+            Actions={"rice"}
+            Restock={"Request"}
+          />
+          <LineBoxInventory
+            name={"Analog table clock"}
+            image={Hoodie}
+            Qty={"x2"}
+            LastRestocked={"Feb 5,2024"}
+            UnitPrice={"$600"}
+            NetProfit={"$60.75"}
+            Status={"Balanced"}
+            Actions={"rice"}
+            Restock={"Request"}
+          />
+          <LineBoxInventory
+            name={"Analog table clock"}
+            image={Hoodie}
+            Qty={"x2"}
+            LastRestocked={"Feb 5,2024"}
+            UnitPrice={"$600"}
+            NetProfit={"$60.75"}
+            Status={"Normal"}
+            Actions={"rice"}
+            Restock={"Request"}
+          />
+          <LineBoxInventory
+            name={"Analog table clock"}
+            image={Hoodie}
+            Qty={"x2"}
+            LastRestocked={"Feb 5,2024"}
+            UnitPrice={"$600"}
+            NetProfit={"$60.75"}
+            Status={"Balanced"}
+            Actions={"rice"}
+            Restock={"Request"}
+          />
+          <LineBoxInventory
+            name={"Analog table clock"}
+            image={Hoodie}
+            Qty={"x2"}
+            LastRestocked={"Feb 5,2024"}
+            UnitPrice={"$600"}
+            NetProfit={"$60.75"}
+            Status={"Normal"}
+            Actions={"rice"}
+            Restock={"Request"}
+          />
         </div>
       </div>
     </div>
